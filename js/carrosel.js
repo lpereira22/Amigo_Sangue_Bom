@@ -13,6 +13,7 @@ function showPersona(){
 }
 
 function setaDireitaSlider(){
+    
     hidePersona()
     if(currentPersona === persona.length -1){
         currentPersona = 0;
@@ -37,14 +38,4 @@ setaEsquerda.addEventListener('click', setaEsquerdaSlider);
 
 
 
-setTimeout(function(){
-    hidePersona()
-    if(currentPersona === persona.length -1){
-        currentPersona = 0;
-        }else{
-        currentPersona++;
-    }
-    showPersona();
-}, 2000);
-
-setaDireita.addEventListener(setTimeout);
+setInterval(setaDireitaSlider, 4000);
